@@ -21,7 +21,7 @@ function current_flo_custom_header_setup() {
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
-		'height'                 => 250,
+		'height'                 => 500,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'current_flo_header_style',
 	) ) );
