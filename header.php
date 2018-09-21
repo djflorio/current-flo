@@ -16,7 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<?php wp_head(); ?>
 </head>
 
@@ -24,24 +24,30 @@
 <div id="page" class="site">
   <?php if ( is_front_page() && is_home() ) : ?>
 
-  <header class="home-header" style="background-image:url('<?php echo get_header_image(); ?>');">
+  <header class="home-header">
     <div class="home-header__branding">
-      <h1 class="home-header__title"><?php bloginfo( 'name' ); ?></h1>
-      <p class="home-header__description">
+			<h1 class="home-header__title"><?php bloginfo( 'name' ); ?></h1>
+			<p class="home-header__description">
         <?php echo get_bloginfo( 'description', 'display' ); ?>
       </p>
+			<ul class="home-header__cogs">
+				<li class="home-header__cog">
+					<i class="home-header__cog--right fas fa-cog"></i>
+				</li>
+				<li class="home-header__cog">
+					<i class="home-header__cog--left fas fa-cog"></i>
+				</li>
+				<li class="home-header__cog">
+					<i class="home-header__cog--right fas fa-cog"></i>
+				</li>
+			</ul>
     </div><!-- .site-branding -->
   </header>
 
   <?php else : ?>
 				
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$current_flo_description = get_bloginfo( 'description', 'display' );
-			if ( $current_flo_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $current_flo_description; /* WPCS: xss ok. */ ?></p>
+			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			
 	<?php endif; ?>
 		
 

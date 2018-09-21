@@ -1,0 +1,17 @@
+@keyframes spin-right {
+  from {
+    @include transform(rotate(0deg));
+  }
+  to {
+    @include transform(rotate(359deg));
+  }
+}
+
+@keyframes spin-left {
+  from {
+    @include transform(rotate(360deg));
+  }
+  to {
+    @include transform(rotate(1deg));
+  }
+}

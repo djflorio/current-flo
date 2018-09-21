@@ -1,0 +1,29 @@
+.home-header {
+  background-color: $primary-color;
+  padding: 150px 50px;
+  text-align: center;
+}
+
+.home-header__title {
+  font-size: 3em;
+  line-height: 1em;
+}
+
+.home-header__cogs {
+
+}
+
+.home-header__cog {
+  display: inline-block;
+  margin: 0 -2px;
+  font-size: 70px;
+  line-height: 70px;
+}
+
+.home-header__cog--right {
+  animation: spin-right 6s linear infinite;
+}
+
+.home-header__cog--left {
+  animation: spin-left 6s linear infinite;
+}
