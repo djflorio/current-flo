@@ -31,17 +31,6 @@
 			<p class="home-header__description">
         <?php echo get_bloginfo( 'description', 'display' ); ?>
       </p>
-			<ul class="home-header__cogs">
-				<li class="home-header__cog">
-					<i class="home-header__cog--right fas fa-cog"></i>
-				</li>
-				<li class="home-header__cog">
-					<i class="home-header__cog--left fas fa-cog"></i>
-				</li>
-				<li class="home-header__cog">
-					<i class="home-header__cog--right fas fa-cog"></i>
-				</li>
-			</ul>
     </div><!-- .site-branding -->
   </header>
 

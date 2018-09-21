@@ -120,6 +120,7 @@ add_action( 'widgets_init', 'current_flo_widgets_init' );
  * Enqueue scripts and styles.
  */
 function current_flo_scripts() {
+  wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Hind|Teko:700', false );
   wp_enqueue_style( 'current-flo-style', get_stylesheet_uri() );
   
   wp_enqueue_script( 'gsap2-0-2', "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js", false );

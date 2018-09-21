@@ -97,26 +97,23 @@ body {
     -webkit-transform: rotate(1deg);
     transform: rotate(1deg); } }
 .home-header {
+  text-align: center;
   background-color: #5f828a;
-  padding: 150px 50px;
-  text-align: center; }
-
-.home-header__title {
-  font-size: 3em;
-  line-height: 1em; }
+  padding: 50px; }
 
 .home-header__graphic {
   width: 400px;
   height: 400px; }
 
-.home-header__cog {
-  display: inline-block;
-  margin: 0 -2px;
-  font-size: 70px;
-  line-height: 70px; }
+.home-header__title {
+  font-family: 'Teko', sans-serif;
+  color: #4d4d4d;
+  text-transform: uppercase;
+  font-size: 4em;
+  line-height: 1em; }
 
-.home-header__cog--right {
-  animation: spin-right 6s linear infinite; }
-
-.home-header__cog--left {
-  animation: spin-left 6s linear infinite; }
+.home-header__description {
+  font-family: 'Hind', sans-serif;
+  color: #666666;
+  font-size: 2em;
+  line-height: 1em; }
