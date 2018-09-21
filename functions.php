@@ -120,7 +120,9 @@ add_action( 'widgets_init', 'current_flo_widgets_init' );
  * Enqueue scripts and styles.
  */
 function current_flo_scripts() {
-	wp_enqueue_style( 'current-flo-style', get_stylesheet_uri() );
+  wp_enqueue_style( 'current-flo-style', get_stylesheet_uri() );
+  
+  wp_enqueue_script( 'gsap2-0-2', "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js", false );
 
 	wp_enqueue_script( 'current-flo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -128,7 +130,12 @@ function current_flo_scripts() {
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
-	}
+  }
+  
+  wp_enqueue_script( 'current-flo-main', get_template_directory_uri() . '/js/main.js', array(), '20151215', true );
+
+  $custom_css = current_flo_get_customizer_css();
+  wp_add_inline_style( 'current-flo-style', $custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'current_flo_scripts' );
 
