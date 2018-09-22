@@ -31,9 +31,19 @@ function current_flo_customize_register( $wp_customize ) {
     'transport' => 'refresh'
   ));
 
+  $wp_customize->add_setting( 'secondary_color', array (
+    'default' => '',
+    'transport' => 'refresh'
+  ));
+
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array(
     'section' => 'colors',
     'label'   => esc_html__( 'Primary color', 'current_flo' ),
+  )));
+
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_color', array(
+    'section' => 'colors',
+    'label'   => esc_html__( 'Secondary color', 'current_flo' ),
   )));
 }
 add_action( 'customize_register', 'current_flo_customize_register' );
@@ -72,6 +82,15 @@ function current_flo_get_customizer_css() {
     ?>
     .primary-color-background {
       background-color: <?php echo $primary_color; ?>;
+    }
+    <?php
+  }
+
+  $secondary_color = get_theme_mod( 'secondary_color', '' );
+  if ( ! empty( $secondary_color ) ) {
+    ?>
+    .secondary-color-text {
+      color: <?php echo $secondary_color; ?>;
     }
     <?php
   }

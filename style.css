@@ -64,9 +64,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block; }
 
 body {
-  color: black;
+  color: #4d4d4d;
   font-size: 16px;
-  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-family: "Hind", sans-serif;
   font-weight: 400;
   line-height: 1.6; }
 
@@ -113,7 +113,54 @@ body {
   line-height: 1em; }
 
 .home-header__description {
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
   color: #666666;
   font-size: 2em;
   line-height: 1em; }
+
+.post {
+  background-color: #efefef;
+  padding: 15px;
+  margin: 15px; }
+
+.post__title {
+  font-size: 2em;
+  color: #4d4d4d; }
+
+.post__title a {
+  color: #4d4d4d; }
+
+.content-area {
+  float: left;
+  margin: 0 -25% 0 0;
+  width: 100%;
+  background-color: #4d4d4d; }
+
+.site-main {
+  margin: 0 25% 0 0; }
+
+.site-content .widget-area {
+  float: right;
+  overflow: hidden;
+  width: 25%; }
+
+.sidebar {
+  margin: 15px 15px 15px 0;
+  padding: 15px;
+  background-color: #efefef; }
+
+.site-footer {
+  clear: both;
+  width: 100%; }
+
+.no-sidebar .content-area {
+  float: none;
+  margin-left: auto;
+  margin-right: auto; }
+
+.no-sidebar .site-main {
+  margin-right: 0; }
+
+.wp-post-image {
+  width: 100%;
+  height: auto; }

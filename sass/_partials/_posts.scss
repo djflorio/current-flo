@@ -1,0 +1,14 @@
+.post {
+  background-color: #efefef;
+  padding: 15px;
+  margin: 15px;
+}
+
+.post__title {
+  font-size: 2em;
+  color: $text-color;
+}
+
+.post__title a {
+  color: $text-color;
+}
